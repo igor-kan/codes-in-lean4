@@ -28,8 +28,7 @@ theorem divides_add {d a b : Nat} (h1 : divides d a) (h2 : divides d b) :
     divides d (a + b) := by
   rcases h1 with ⟨k1, hk1⟩
   rcases h2 with ⟨k2, hk2⟩
-  use (k1 + k2)
-  rw [hk1, hk2]
-  rw [Nat.mul_add]
+  refine ⟨k1 + k2, ?_⟩
+  rw [hk1, hk2, Nat.mul_add]
 
 end FormalMath
