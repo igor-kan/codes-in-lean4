@@ -1,0 +1,11 @@
+namespace Geninsertion_60
+
+def insert (x : Nat) : List Nat → List Nat
+  | [] => [x]
+  | y :: ys => if x ≤ y then x :: y :: ys else y :: insert x ys
+def insSort : List Nat → List Nat
+  | [] => []
+  | x :: xs => insert x (insSort xs)
+theorem st : insSort [67, 33, 46, 16, 77, 80] = [16, 33, 46, 67, 77, 80] := by decide
+
+end Geninsertion_60
