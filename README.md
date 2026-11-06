@@ -20,3 +20,10 @@ laws, GCD associativity, order and subtraction laws, boolean algebra
 (and/or/xor/decide), list append/length/map/reverse/filter lemmas, option
 and product lemmas, and power identities. Every file elaborates with
 `lean <file>`.
+
+## Continuous Formal Verification & SMT Solver Proof Suite
+
+The `formal_verification/` directory houses machine-checked Lean 4 proof certificates
+and Z3 SMT-LIB2 automated solver counterexamples. Whenever property testing or
+automated theorem provers isolate a new lemma certificate or boundary counterexample,
+it is committed as an immutable mathematical regression benchmark.
