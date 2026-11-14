@@ -1,0 +1,2 @@
+# Abstract function prototypes and contracts for Machine-Checked Proof that Euclid GCD Divides Inputs
+# Module: euclidean_algorithm_gcd | Algorithm Family: formal_proof
