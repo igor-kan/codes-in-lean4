@@ -1,0 +1,3 @@
+namespace StackRpn.PropTests
+theorem add_assoc_test (a b c : Nat) : (a + b) + c = a + (b + c) := Nat.add_assoc a b c
+end StackRpn.PropTests
