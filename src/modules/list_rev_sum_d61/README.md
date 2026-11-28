@@ -1,0 +1,44 @@
+# List Reverse Sum Invariance via Append Distributivity (`list_rev_sum_d61`)
+
+> Category: **Verified Data Structures** | Language: **Lean 4.16**
+
+## Overview
+
+Defines a naive structural reversal built from right-appends and an additive sum fold, proving the append homomorphism and that reversal preserves the total sum.
+
+## Complexity Guarantees
+
+| Metric | Asymptotic Bound |
+| :--- | :--- |
+| **Time Complexity** | `O(N^2) naive structural reverse with additive sum fold` |
+| **Space Complexity** | `O(N)` |
+
+## Mathematical & Safety Invariants
+
+- sumN (xs ++ ys) = sumN xs + sumN ys and sumN (revN xs) = sumN xs.
+
+## Module Architecture
+
+| File | Lifecycle Role |
+| :--- | :--- |
+| `Types.lean` | Stage 01 |
+| `Errors.lean` | Stage 02 |
+| `Contract.lean` | Stage 03 |
+| `Core.lean` | Stage 04 |
+| `Validation.lean` | Stage 05 |
+| `FastPath.lean` | Stage 06 |
+| `Soundness.lean` | Stage 07 |
+| `Invariants.lean` | Stage 08 |
+| `UnitTests.lean` | Stage 09 |
+| `PropertyTests.lean` | Stage 10 |
+| `Decidability.lean` | Stage 11 |
+| `README.md` | Stage 12 |
+
+## Verification & Execution Example
+
+```text
+for f in Types.lean Errors.lean Contract.lean Core.lean Validation.lean FastPath.lean Soundness.lean Invariants.lean UnitTests.lean PropertyTests.lean Decidability.lean; do lean "$f" || exit 1; done
+```
+
+---
+© 2026 Igor Kan
